@@ -1,0 +1,69 @@
+{
+  "floor": 1,
+  "boss": {
+    "tileId": "f1_boss",
+    "name": "Giant Mole",
+    "hp": 100,
+    "drops": [
+      { "item": "Mole skin", "damage": 10 },
+      { "item": "Mole claw", "damage": 15 },
+      { "item": "Baby mole", "damage": 25 }
+    ]
+  },
+  "tiles": [
+    {
+      "id": "f1_start",
+      "type": "skilling",
+      "task": "Mine 500 iron ore",
+      "connections": ["f1_tile_2", "f1_tile_3"],
+      "position": { "x": 250, "y": 450 },
+      "powerup": null,
+      "isStarter": true
+    },
+    {
+      "id": "f1_tile_2",
+      "type": "pvm",
+      "task": "Kill 50 Hill Giants",
+      "connections": ["f1_tile_4"],
+      "position": { "x": 200, "y": 350 },
+      "powerup": null,
+      "isStarter": false
+    },
+    {
+      "id": "f1_tile_3",
+      "type": "elite_skilling",
+      "task": "Get 75 Runecrafting",
+      "connections": ["f1_tile_4", "f1_tile_5"],
+      "position": { "x": 300, "y": 350 },
+      "powerup": "reroll",
+      "isStarter": false
+    },
+    {
+      "id": "f1_tile_4",
+      "type": "ca",
+      "task": "Complete Lumbridge Elite Diary",
+      "connections": ["f1_boss"],
+      "position": { "x": 200, "y": 250 },
+      "powerup": null,
+      "isStarter": false
+    },
+    {
+      "id": "f1_tile_5",
+      "type": "elite_pvm",
+      "task": "Get a Dragon Warhammer drop",
+      "connections": ["f1_boss"],
+      "position": { "x": 300, "y": 250 },
+      "powerup": "skip",
+      "isStarter": false
+    },
+    {
+      "id": "f1_boss",
+      "type": "boss",
+      "task": "Defeat Giant Mole",
+      "connections": [],
+      "position": { "x": 250, "y": 100 },
+      "powerup": null,
+      "isStarter": false
+    }
+  ]
+}
