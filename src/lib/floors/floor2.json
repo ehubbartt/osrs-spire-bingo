@@ -1,0 +1,134 @@
+{
+  "floor": 2,
+  "boss": {
+    "tileId": "f2_boss",
+    "name": "Zulrah",
+    "hp": 3000,
+    "drops": [
+      { "item": "Serpentine Visage", "damage": 512 },
+      { "item": "Tanzanite Fang", "damage": 512 },
+      { "item": "Magic Fang", "damage": 512 },
+      { "item": "Pet Snakeling", "damage": 500 },
+      { "item": "Mutagen", "damage": 1000 }
+    ]
+  },
+  "tiles": [
+    {
+      "id": "f2_start",
+      "type": "pvm",
+      "task": "Receive a trident drop",
+      "connections": ["f2_left_1", "f2_right_1"],
+      "position": { "x": 300, "y": 480 },
+      "powerup": null,
+      "isStarter": true
+    },
+    {
+      "id": "f2_left_1",
+      "type": "elite_pvm",
+      "task": "Get a purple in any raid",
+      "connections": ["f2_left_2", "f2_left_3"],
+      "position": { "x": 100, "y": 380 },
+      "powerup": "skip",
+      "isStarter": false
+    },
+    {
+      "id": "f2_left_2",
+      "type": "ca",
+      "task": "Kill Seren and Galvek in the elite speed times in the same inventory",
+      "connections": ["f2_left_4"],
+      "position": { "x": 50, "y": 280 },
+      "powerup": null,
+      "isStarter": false
+    },
+    {
+      "id": "f2_left_3",
+      "type": "elite_skilling",
+      "task": "Blow 1000 molten glass",
+      "connections": ["f2_left_4"],
+      "position": { "x": 150, "y": 280 },
+      "powerup": "reroll",
+      "isStarter": false
+    },
+    {
+      "id": "f2_left_4",
+      "type": "pvm",
+      "task": "Receive a Dark Bow drop",
+      "connections": ["f2_converge_1"],
+      "position": { "x": 100, "y": 180 },
+      "powerup": null,
+      "isStarter": false
+    },
+    {
+      "id": "f2_right_1",
+      "type": "pvm",
+      "task": "Receive any unique from Tormented Demons",
+      "connections": ["f2_right_2", "f2_right_3"],
+      "position": { "x": 500, "y": 380 },
+      "powerup": null,
+      "isStarter": false
+    },
+    {
+      "id": "f2_right_2",
+      "type": "elite_ca",
+      "task": "Complete the fight caves with a budget of less than 200k",
+      "connections": ["f2_right_4"],
+      "position": { "x": 450, "y": 280 },
+      "powerup": "reroll",
+      "isStarter": false
+    },
+    {
+      "id": "f2_right_3",
+      "type": "skilling",
+      "task": "Open 100k vale offerings",
+      "connections": ["f2_right_4"],
+      "position": { "x": 550, "y": 280 },
+      "powerup": null,
+      "isStarter": false
+    },
+    {
+      "id": "f2_right_4",
+      "type": "elite_pvm",
+      "task": "Get Bandos unique drop",
+      "connections": ["f2_converge_1"],
+      "position": { "x": 500, "y": 180 },
+      "powerup": "skip",
+      "isStarter": false
+    },
+    {
+      "id": "f2_converge_1",
+      "type": "mystery",
+      "task": "Complete Mystery Challenge #2",
+      "connections": ["f2_pre_boss_1", "f2_pre_boss_2"],
+      "position": { "x": 300, "y": 120 },
+      "powerup": null,
+      "isStarter": false
+    },
+    {
+      "id": "f2_pre_boss_1",
+      "type": "ca",
+      "task": "Kill Vorkath with magic",
+      "connections": ["f2_boss"],
+      "position": { "x": 240, "y": 60 },
+      "powerup": null,
+      "isStarter": false
+    },
+    {
+      "id": "f2_pre_boss_2",
+      "type": "elite_skilling",
+      "task": "Catch 1000 black chinchompas",
+      "connections": ["f2_boss"],
+      "position": { "x": 360, "y": 60 },
+      "powerup": "reroll",
+      "isStarter": false
+    },
+    {
+      "id": "f2_boss",
+      "type": "boss",
+      "task": "Defeat Zulrah",
+      "connections": [],
+      "position": { "x": 300, "y": 10 },
+      "powerup": null,
+      "isStarter": false
+    }
+  ]
+}

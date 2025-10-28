@@ -1,0 +1,41 @@
+{
+  "floor": 2,
+  "boss": {
+    "tileId": "f2_boss",
+    "name": "Zulrah",
+    "hp": 100,
+    "drops": [
+      { "item": "Serpentine Visage", "damage": 40 },
+      { "item": "Tanzanite Fang", "damage": 60 }
+    ]
+  },
+  "tiles": [
+    {
+      "id": "f2_start",
+      "type": "pvm",
+      "task": "Kill 10 cows (TEST)",
+      "connections": ["f2_middle"],
+      "position": { "x": 300, "y": 400 },
+      "powerup": null,
+      "isStarter": true
+    },
+    {
+      "id": "f2_middle",
+      "type": "elite_skilling",
+      "task": "Cook 100 shrimp (TEST)",
+      "connections": ["f2_boss"],
+      "position": { "x": 300, "y": 250 },
+      "powerup": "reroll",
+      "isStarter": false
+    },
+    {
+      "id": "f2_boss",
+      "type": "boss",
+      "task": "Defeat Zulrah",
+      "connections": [],
+      "position": { "x": 300, "y": 100 },
+      "powerup": null,
+      "isStarter": false
+    }
+  ]
+}

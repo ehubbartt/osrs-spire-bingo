@@ -1,0 +1,41 @@
+{
+  "floor": 1,
+  "boss": {
+    "tileId": "f1_boss",
+    "name": "Giant Mole",
+    "hp": 50,
+    "drops": [
+      { "item": "Mole skin", "damage": 20 },
+      { "item": "Mole claw", "damage": 30 }
+    ]
+  },
+  "tiles": [
+    {
+      "id": "f1_start",
+      "type": "pvm",
+      "task": "Kill 5 chickens (TEST)",
+      "connections": ["f1_middle"],
+      "position": { "x": 250, "y": 400 },
+      "powerup": null,
+      "isStarter": true
+    },
+    {
+      "id": "f1_middle",
+      "type": "elite_pvm",
+      "task": "Get any god sword (TEST)",
+      "connections": ["f1_boss"],
+      "position": { "x": 250, "y": 250 },
+      "powerup": "skip",
+      "isStarter": false
+    },
+    {
+      "id": "f1_boss",
+      "type": "boss",
+      "task": "Defeat Giant Mole",
+      "connections": [],
+      "position": { "x": 250, "y": 100 },
+      "powerup": null,
+      "isStarter": false
+    }
+  ]
+}

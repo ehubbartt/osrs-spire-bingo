@@ -13,47 +13,110 @@
   "tiles": [
     {
       "id": "f1_start",
-      "type": "skilling",
-      "task": "Mine 500 iron ore",
-      "connections": ["f1_tile_2", "f1_tile_3"],
-      "position": { "x": 250, "y": 450 },
+      "type": "pvm",
+      "task": "Get a Scurrius spine",
+      "connections": ["f1_left_1", "f1_right_1"],
+      "position": { "x": 250, "y": 480 },
       "powerup": null,
       "isStarter": true
     },
     {
-      "id": "f1_tile_2",
+      "id": "f1_left_1",
       "type": "pvm",
-      "task": "Kill 50 Hill Giants",
-      "connections": ["f1_tile_4"],
-      "position": { "x": 200, "y": 350 },
+      "task": "Receive a long bone drop",
+      "connections": ["f1_left_2", "f1_left_3"],
+      "position": { "x": 150, "y": 400 },
       "powerup": null,
       "isStarter": false
     },
     {
-      "id": "f1_tile_3",
+      "id": "f1_left_2",
+      "type": "skilling",
+      "task": "Run 50 laps at any agility course",
+      "connections": ["f1_left_4"],
+      "position": { "x": 100, "y": 320 },
+      "powerup": null,
+      "isStarter": false
+    },
+    {
+      "id": "f1_left_3",
+      "type": "ca",
+      "task": "Kill obor with nothing equipped",
+      "connections": ["f1_left_4"],
+      "position": { "x": 180, "y": 320 },
+      "powerup": null,
+      "isStarter": false
+    },
+    {
+      "id": "f1_left_4",
+      "type": "elite_pvm",
+      "task": "Get Abyssal Whip drop",
+      "connections": ["f1_converge_1"],
+      "position": { "x": 140, "y": 240 },
+      "powerup": "skip",
+      "isStarter": false
+    },
+    {
+      "id": "f1_right_1",
       "type": "elite_skilling",
-      "task": "Get 75 Runecrafting",
-      "connections": ["f1_tile_4", "f1_tile_5"],
-      "position": { "x": 300, "y": 350 },
+      "task": "Obtain loot from 25 GOTR pulls",
+      "connections": ["f1_right_2", "f1_right_3"],
+      "position": { "x": 350, "y": 400 },
       "powerup": "reroll",
       "isStarter": false
     },
     {
-      "id": "f1_tile_4",
-      "type": "ca",
-      "task": "Complete Lumbridge Elite Diary",
-      "connections": ["f1_boss"],
-      "position": { "x": 200, "y": 250 },
+      "id": "f1_right_2",
+      "type": "pvm",
+      "task": "Kill KBD 50 times",
+      "connections": ["f1_right_4"],
+      "position": { "x": 320, "y": 320 },
       "powerup": null,
       "isStarter": false
     },
     {
-      "id": "f1_tile_5",
+      "id": "f1_right_3",
+      "type": "elite_ca",
+      "task": "Kill all 3 daggonoth kings while only using 3 unique weapons",
+      "connections": ["f1_right_4"],
+      "position": { "x": 400, "y": 320 },
+      "powerup": "reroll",
+      "isStarter": false
+    },
+    {
+      "id": "f1_right_4",
+      "type": "skilling",
+      "task": "Create 500 teleport tablets",
+      "connections": ["f1_converge_1"],
+      "position": { "x": 360, "y": 240 },
+      "powerup": null,
+      "isStarter": false
+    },
+    {
+      "id": "f1_converge_1",
+      "type": "ca",
+      "task": "Kill zulrah with a time greater than 10 minutes",
+      "connections": ["f1_pre_boss_1", "f1_pre_boss_2"],
+      "position": { "x": 250, "y": 180 },
+      "powerup": null,
+      "isStarter": false
+    },
+    {
+      "id": "f1_pre_boss_1",
       "type": "elite_pvm",
-      "task": "Get a Dragon Warhammer drop",
+      "task": "Receive an armour seed from the corrupted gauntlet",
       "connections": ["f1_boss"],
-      "position": { "x": 300, "y": 250 },
+      "position": { "x": 200, "y": 100 },
       "powerup": "skip",
+      "isStarter": false
+    },
+    {
+      "id": "f1_pre_boss_2",
+      "type": "mystery",
+      "task": "Complete Mystery Challenge",
+      "connections": ["f1_boss"],
+      "position": { "x": 300, "y": 100 },
+      "powerup": null,
       "isStarter": false
     },
     {
@@ -61,7 +124,7 @@
       "type": "boss",
       "task": "Defeat Giant Mole",
       "connections": [],
-      "position": { "x": 250, "y": 100 },
+      "position": { "x": 250, "y": 30 },
       "powerup": null,
       "isStarter": false
     }
